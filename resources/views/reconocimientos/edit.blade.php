@@ -10,35 +10,35 @@
          </div>
          <div class="card-body" style="padding:30px">
 
-            <form action="{{ action([App\Http\Controllers\ReconocimientoController::class, 'getEdit'], ['id' => $id]) }}" method="POST">
+            <form action="{{ action([App\Http\Controllers\ReconocimientoController::class, 'getEdit'], ['id' => $reconocimientos->id]) }}" method="POST">
                 @method('PUT')
 	            @csrf
 
 	            <div class="form-group">
 	               <label for="estudiante_id">Estudiante id</label>
-	               <input type="text" name="estudiante_id" id="estudiante_id" class="form-control">
+	               <input type="text" name="estudiante_id" id="estudiante_id" class="form-control" value="{{$reconocimientos->estudiante_id}}">
 	            </div>
 
 	            <div class="form-group">
 	               <label for="docente_validator">Actividad id</label>
-	               <input type="number" name="docente_validator" id="docente_validator">
+	               <input type="number" name="docente_validator" id="docente_validator" value="{{$reconocimientos->actividad_id}}">
 	            </div>
 
 	            <div class="form-group">
 	               <label for="documento">Documento</label><br />
                     https://github.com/2DAW-CarlosIII/
-	               <input type="text" name="documento" id="documento" class="form-control">
+	               <input type="text" name="documento" id="documento" class="form-control" value="{{$reconocimientos->documento}}">
 	            </div>
 
 	            <div class="form-group">
 	               <label for="fecha">Fecha</label>
-	               <textarea name="fecha" id="fecha" class="form-control" rows="3"></textarea>
+	               <textarea name="fecha" id="fecha" class="form-control" rows="3" value="{{$reconocimientos->fecha}}" ></textarea>
                    <br />
 	            </div>
 
                 <div class="form-group">
                     <label for="docente_validator">Docente validator</label>
-                    <input type="number" name="docente_validator" id="docente_validator">
+                    <input type="number" name="docente_validator" id="docente_validator" value="{{$reconocimientos->docente_validador}}">
                  </div>
 
 	            <div class="form-group text-center">

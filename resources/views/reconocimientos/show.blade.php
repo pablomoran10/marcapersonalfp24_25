@@ -11,16 +11,16 @@
             <div class="col-md-6">
                 <h2>Datos del Reconocimiento</h2><br>
                 <ul>
-                    <li><strong>Estudiante ID:</strong> {{ $reconocimiento['estudiante_id'] }}</li>
-                    <li><strong>Actividad ID:</strong> {{ $reconocimiento['actividad_id'] }}</li>
-                    <li><strong>Documento:</strong> {{ $reconocimiento['documento'] }}</li>
-                    <li><strong>Fecha:</strong> {{ $reconocimiento['fecha'] }}</li>
-                    <li><strong>Docente Validador:</strong> {{ $reconocimiento['docente_validador'] }}</li>
+                    <li><strong>Estudiante ID:</strong> {{ $reconocimiento->estudiante_id }}</li>
+                    <li><strong>Actividad ID:</strong> {{$reconocimiento->actividad_id }}</li>
+                    <li><strong>Documento:</strong> {{ $reconocimiento->documento }}</li>
+                    <li><strong>Fecha:</strong> {{ $reconocimiento->fecha }}</li>
+                    <li><strong>Docente Validador:</strong> {{ $reconocimiento->docente_validador }}</li>
                 </ul>
 
                 <div class="buttons">
                     <!-- Botón para editar -->
-                    <a href="{{ action([App\Http\Controllers\ReconocimientoController::class, 'getEdit'], ['id' => $id] ) }}" class="button alt">Editar reconocimiento</a></li>
+                    <a href="{{ action([App\Http\Controllers\ReconocimientoController::class, 'getEdit'], ['id' => $reconocimiento->id] ) }}" class="button alt">Editar reconocimiento</a></li>
                     <!-- Botón para volver al listado -->
                     <a href="{{ action([App\Http\Controllers\ReconocimientoController::class, 'getIndex']) }}" class="button alt">Volver al listado</a></li>
                 </div>

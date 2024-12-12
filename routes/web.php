@@ -22,6 +22,8 @@ Route::get('perfil/{id?}', function($id = null) {
 
 
 
+
+include __DIR__.'/docentes.php';
 include __DIR__.'/actividades.php';
 include __DIR__.'/curriculos.php';
 include __DIR__.'/proyectos.php';
